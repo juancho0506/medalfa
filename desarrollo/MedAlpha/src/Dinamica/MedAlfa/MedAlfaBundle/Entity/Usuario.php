@@ -2,12 +2,13 @@
 
 namespace Dinamica\MedAlfa\MedAlfaBundle\Entity;
 
+use FOS\UserBundle\Document\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Dinamica\MedAlfa\MedAlfaBundle\Entity\Usuario
  *
- * @ORM\Table()
+ * @ORM\Table(name="usuario")
  * @ORM\Entity(repositoryClass="Dinamica\MedAlfa\MedAlfaBundle\Entity\UsuarioRepository")
  */
 class Usuario extends BaseUser
@@ -15,11 +16,11 @@ class Usuario extends BaseUser
     /**
      * @var integer $id
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var date $ultimoLogueo

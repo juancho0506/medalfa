@@ -115,8 +115,8 @@ class Medico {
 
 	/**
 	 * @var EspecialidadMD $especialidadMD
-	 *  @ManyToMany(targetEntity="EspecialidadMD", inversedBy="medicos")
-	 *  @JoinTable(name="medico_especialidad",
+	 *  @ORM\ManyToMany(targetEntity="EspecialidadMD", inversedBy="medicos")
+	 *  @ORM\JoinTable(name="medico_especialidad",
 	 *      joinColumns={@JoinColumn(name="especialidad_id", referencedColumnName="id")},
 	 *      inverseJoinColumns={@JoinColumn(name="medico_id", referencedColumnName="id")}
 	 *      )
