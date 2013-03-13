@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Dinamica\MedAlfa\MedAlfaBundle\Entity\Usuario
  *
- * @ORM\Table(name="usuario")
+ * @ORM\Table(name="Usuario")
  * @ORM\Entity(repositoryClass="Dinamica\MedAlfa\MedAlfaBundle\Entity\UsuarioRepository")
  */
 class Usuario extends BaseUser
@@ -47,46 +47,6 @@ class Usuario extends BaseUser
     }
 
     /**
-     * Set login
-     *
-     * @param string $login
-     */
-    public function setLogin($login)
-    {
-        $this->login = $login;
-    }
-
-    /**
-     * Get login
-     *
-     * @return string 
-     */
-    public function getLogin()
-    {
-        return $this->login;
-    }
-
-    /**
-     * Set password
-     *
-     * @param string $password
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-    }
-
-    /**
-     * Get password
-     *
-     * @return string 
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    /**
      * Set ultimoLogueo
      *
      * @param date $ultimoLogueo
@@ -105,4 +65,13 @@ class Usuario extends BaseUser
     {
         return $this->ultimoLogueo;
     }
+    
+    /**
+     *
+     * La represntacion en string del objeto.
+     */
+    public function __toString(){
+    	return $this->username;
+    }
+    
 }
