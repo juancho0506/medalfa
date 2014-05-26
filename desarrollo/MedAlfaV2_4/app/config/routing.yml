@@ -1,0 +1,4 @@
+DinamicaMedAlfaMedAlfaBundle:
+    resource: "@DinamicaMedAlfaMedAlfaBundle/Controller/"
+    type:     annotation
+    prefix:   /medalfa
